@@ -1,0 +1,12 @@
+1. head()
+2. lm(y~x,data)
+   using attach(DataX), then all the following data would auto assign data = DataX,
+   lm.fit = lm(y~x)
+3. summary(lm.fit) gives almost all the useful sta info.
+   notice: we wish a small p-value, p-value stands for the probability of geting a sample more extrem. We don't want extrem values, so a small p is good.
+           we wish a small RSE, residual standard error is the error, it measures the fitness of our estimated model to the real one.
+           we wish a large t-sta, t-statistic measures the number of std that our value (estimates) are away from 0.
+           we wish a large R^2, it measures the proportion of variance that could be explained. R^2 scale: [0,1].
+           we wish a large F-sta, it measures the aggregate fitness (cinsidering the corporation of multiple predictors), close to 1 means a bad model.
+4. Print Specific Indicators
+   
