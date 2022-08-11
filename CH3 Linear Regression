@@ -1,3 +1,4 @@
+Process: 1.see data, 2.fit data in lm() and 3.summary() to see beta estimtes, 5.create the predict() model, 6. plot the data and model line, 7.plot the 4 tables
 1. head()
 2. lm(y~x,data)
    using attach(DataX), then all the following data would auto assign data = DataX,
@@ -9,4 +10,15 @@
            we wish a large R^2, it measures the proportion of variance that could be explained. R^2 scale: [0,1].
            we wish a large F-sta, it measures the aggregate fitness (cinsidering the corporation of multiple predictors), close to 1 means a bad model.
 4. Print Specific Indicators
-   
+    names(lim.fit) to get some of the possible terms we could have
+    confint(lm.fit) to get the confidence interval estimates instead of a single coef number
+5. predict(lm.fit,data.fram())
+    Confidence interval VS prediction interval. predi has e so larger range
+       predict(lm.fit,data.frame (lstat=c(5,10,15)), interval='confidence')
+       predict(lm.fit,data.frame (lstat=c(5,10,15)), interval='prediction')
+6. plot the data and draw the prediction line
+    plot(lstat,medv)
+    abline(lm.fit,col='purple')
+7. Draw the 4 plots in one page together
+    par(mfrow=c(2,2))
+    plot(lm.fit)
