@@ -26,3 +26,16 @@ Process: 1.see data, 2.fit data in lm() and 3.summary() to see beta estimtes, 5.
     7.2 Normal Q-Q Plot: indicates if the residuals are normally distributed. A straight dashed line would be prefered.
     7.3 Scale-Location Plot: Indicates if the residuals are spread equally along the ranges of predictors. Prefer horizontal line with dots qually spread. Use it to check the assumption of equal variance (homoscedasticity).
     7.4 Residuals VS Leverage Plot: This graph helps us find influential outliers. Not all the outliers are important. Looking for outliers that are outside the Cook's Distance on the right side of the graph. 
+8. Multiple LR and interation Terms
+    multi predictors: lm(y~x1 + x2); to include all predictors: lm(y~.), use VIF to evaluate the model: library(car) vif(lm.fit); delete 1 predicot: lm(y~. -x1)
+    interactions: lm(y~x1*x2); x1*x2 --> x1 + x2 + x1:x2; x1:x2 means the interation term between x1 and x2
+9. Non-Linear Predictors
+    create I(x^2) as a new predictor, lm(y~ x + I(x^2))
+    poly(x,5) gives x,x^2, x^3, x^4, x^5, lm(y~poly(x,5))
+10. Qualitative perdicotrs
+    contrasts(qualitative x) would auto provide us dummy variables
+11. Compare Models
+    Anova(lm.fit1, lm.fit2), prefer big F, small p,small error
+    the anova performs a hypo test, hte null hypo is the two models fit the data same well.
+
+    
