@@ -22,4 +22,7 @@ Process: 1.see data, 2.fit data in lm() and 3.summary() to see beta estimtes, 5.
 7. Draw the 4 plots in one page together
     par(mfrow=c(2,2))
     plot(lm.fit)
-8. 
+    7.1 Residuals VS Fitted Plot: a flat line(spread) show a good fit, while a parabola indicates there are non-linear relationships that are not explained by the model.
+    7.2 Normal Q-Q Plot: indicates if the residuals are normally distributed. A straight dashed line would be prefered.
+    7.3 Scale-Location Plot: Indicates if the residuals are spread equally along the ranges of predictors. Prefer horizontal line with dots qually spread. Use it to check the assumption of equal variance (homoscedasticity).
+    7.4 Residuals VS Leverage Plot: This graph helps us find influential outliers. Not all the outliers are important. Looking for outliers that are outside the Cook's Distance on the right side of the graph. 
