@@ -22,3 +22,4 @@ Process: 1.see data, 2.fit data in lm() and 3.summary() to see beta estimtes, 5.
 7. Draw the 4 plots in one page together
     par(mfrow=c(2,2))
     plot(lm.fit)
+8. 
