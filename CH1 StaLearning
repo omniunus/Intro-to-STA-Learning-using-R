@@ -1,4 +1,16 @@
-1.
+1.What is statistical learning?
+   Develope an accurate model that can be used to predict responses using predictors.
+   Y = f(x) + e
+   We are trying to estimate f for prediction and inference purpose.
+   Y^ = f^(x)
+   f(x) = f^(x) + reducible error
+   
+   Y = f(x) + e = f^(x) + reducible error + e
+   
+   E(Y-Y^)^2 = reducible error + e
+             = [f(x) -f^(x)]^2 + var(e)
+             = E[f(x) + e - f^(x)]^2
+             = E[Y-Y^]^2
 Some R bases: 
 1. create a function:
   MyFunc = function(){ xxxx }
