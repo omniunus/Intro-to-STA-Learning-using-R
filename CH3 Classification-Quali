@@ -3,4 +3,9 @@ I. In many situations, the response variables could be qualitative. One approach
 
 1. Two reasons why not using linear Regression: For categorizations larger than 2, meaningless assigned numbers. For two cates, assign 1 and 0 but the estimated Y may exceed [0,1].
 
+II. Logistic Regression, range [0,1]
+p(X) = e^(b0 + b1*X) / 1 + e^(b0 + b1*X)
+say A= e^(b0 + b1*X), Px = A/(1+A)
+
+by some calculation
 
