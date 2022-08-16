@@ -7,5 +7,9 @@ II. Logistic Regression, range [0,1]
 1. The logi model
    Logi func: p(X) = e^(b0 + b1*X) / 1 + e^(b0 + b1*X)
    write as:  p(X) = A/(1+A) if set A= e^(b0 + b1*X)
-   trans to:  p(X) / ( 1-p(x) ) = A, p(X) / ( 1-p(x) ) is called odds, [0,+infinity]
+   trans to:  p(X) / ( 1-p(x) ) = A, here p(X) / ( 1-p(x) ) is called odds, [0,+infinity]
+   both log:  log( p(X) / ( 1-p(x) ) ) = b0 + b1X, here log( p(X) / ( 1-p(x) ) ) is called log odds or say logit
+              One unit Increasing in X changes the log odds by b1, b1 does not correspond to the change in p(X), change in p(X) depends on the value of X.
+              But still, if b1 is positive, then the increaseing in X associates with increasing in p(X).
+2. Estimate the regression coefficients
 
