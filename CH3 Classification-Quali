@@ -28,4 +28,5 @@ II. Logistic Regression, range [0,1]
    could use other alternative
 
 III. Generative Models for Classification
+1. process: seperatly model the distribution of predictors, then use Bayes' theorem to make an estimate fit in Pr(Y=k|X=x)
 
