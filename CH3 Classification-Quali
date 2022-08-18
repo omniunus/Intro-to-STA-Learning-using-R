@@ -4,7 +4,7 @@ I.
    Two reasons why not using linear Regression: For categorizations larger than 2, meaningless assigned numbers. For two cates, assign 1 and 0 but the estimated Y may exceed [0,1].
 
 II. Logistic Regression, range [0,1]
-1. The logi model
+1. The logi model for binary
    Logi func: p(X) = e^(b0 + b1*X) / 1 + e^(b0 + b1*X)
    write as:  p(X) = A/(1+A) if set A= e^(b0 + b1*X)
    trans to:  p(X) / ( 1-p(x) ) = A, here p(X) / ( 1-p(x) ) is called odds, [0,+infinity]
@@ -12,4 +12,20 @@ II. Logistic Regression, range [0,1]
               One unit Increasing in X changes the log odds by b1, b1 does not correspond to the change in p(X), change in p(X) depends on the value of X.
               But still, if b1 is positive, then the increaseing in X associates with increasing in p(X).
 2. Estimate the regression coefficients
+    To maximum likelihood: b0 and b1 such that predicted probability p^(Xi) using p(X) = e^(b0 + b1*X) / 1 + e^(b0 + b1*X) be as close as possible to each individuals' observed value
+    In the R table, z-statistic just like t-sta in CH2, describes how many standard deviations the object is away from the population mean, wish small z
+3. Making Predictions
+    use the coefficient in R tables to calculate p^(x)
+    
+4. Extend to multipul logistic regression
+   Logi func: p(X) = e^(b0 + b1*X1 +  b2*X2 + ... + bpXp) / 1 + e^(b0 + b1*X1 +  b2*X2 + ... + bpXp)
+   write as:  p(X) = A/(1+A) if set A= e^(b0 + b1*X1 +  b2*X2 + ... + bpXp)
+   trans to:  p(X) / ( 1-p(x) ) = A, here p(X) / ( 1-p(x) ) is called odds, [0,+infinity]
+   both log:  log( p(X) / ( 1-p(x) ) ) = b0 + b1*X1 +  b2*X2 + ... + bpXp , here log( p(X) / ( 1-p(x) ) ) is called log odds or say logit
+
+5. Multinomial logistic regression
+   apply when classications of the response >= 3
+   could use other alternative
+
+III. Generative Models for Classification
 
