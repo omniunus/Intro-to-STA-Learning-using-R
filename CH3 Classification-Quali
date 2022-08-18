@@ -29,4 +29,8 @@ II. Logistic Regression, range [0,1]
 
 III. Generative Models for Classification
 1. process: seperatly model the distribution of predictors, then use Bayes' theorem to make an estimate fit in Pr(Y=k|X=x)
-
+            When Xs' distributions are assumed normal, the model is similar to logistic regression
+2. Advantages over logistic regression: logi reg is unstable when see substantial seperations between two classes; 
+                                        generative models better when Xs' distributions normal and small sample size;
+                                        generative models natually apply fo case of more than 2 response classes.
+3. 
