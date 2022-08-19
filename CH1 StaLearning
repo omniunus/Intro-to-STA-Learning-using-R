@@ -27,7 +27,8 @@ II. Testify Model Accuracy
     MSE: mean sqr error, MSE = (1/n) * sum from i=1 to i=n ( Yi-f^(Xi) )^2, sum sqr the diff between predicted and observed responses for Xi
     We wish a small MSE, we pick the model with the smallest TEST MSE
     We care about the TEST MSE, the training MSE usually always perform better than the test MSE.
-    Notice the U-shape 
+    Notice the U-shape MSE and irreducible curve. The irreducible error it the minimum possible test MSE
+    recall the E(Y-Y^)^2 = E[ f(x) + e - f^(x) ]^2 = [ f(x) - f^(x) ]^2  + var(e) = reducible error + irreducible error
    
    
 Some R bases: 
