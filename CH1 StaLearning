@@ -29,7 +29,15 @@ II. Testify Model Accuracy
     We care about the TEST MSE, the training MSE usually always perform better than the test MSE.
     Notice the U-shape MSE and irreducible curve. The irreducible error it the minimum possible test MSE
     recall the E(Y-Y^)^2 = E[ f(x) + e - f^(x) ]^2 = [ f(x) - f^(x) ]^2  + var(e) = reducible error + irreducible error
-   
+ 2. Trade-off between variance and bias
+    
+ 
+    more flexible - more variance. When fit the training too well, has the risk of overfitting. We care about the test MSE accordingly, the predictions.
+    more bias - less complexity, easy for interpretation. May not fitting the data well, sometimes superisingly has better predictions.
+    reacall the E(Y-Y^)^2 and apply (x0,y0), E[ y0 - f^(x0) ]^2 = [ f(x) - f^(x) ]^2             +  var(e)
+                                                                =  reducible error               +  irreducible error
+                                                                =  Var(f^(x0)) + Bias(f^(x0))^2  +  var(e)
+ 
    
 Some R bases: 
 1. create a function:
