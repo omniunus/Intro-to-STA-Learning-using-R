@@ -21,7 +21,13 @@ I. What is statistical learning?
    unsupervised learning does not has the response value Y
 7. Regression and Classification Problems
    regression - quantitatice response
-   classification - qualitative response
+   classification - qualitative response. We do use regression for binary quali by setting dummy varibales.
+II. Testify Model Accuracy
+ 1. Measuring the quality of fitness, using: MSE (mean squared error)
+    MSE: mean sqr error, MSE = (1/n) * sum from i=1 to i=n ( Yi-f^(Xi) )^2, sum sqr the diff between predicted and observed responses for Xi
+    We wish a small MSE, we pick the model with the smallest TEST MSE
+    We care about the TEST MSE, the training MSE usually always perform better than the test MSE.
+    Notice the U-shape 
    
    
 Some R bases: 
