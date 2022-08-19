@@ -22,6 +22,7 @@ I. What is statistical learning?
 7. Regression and Classification Problems
    regression - quantitatice response
    classification - qualitative response. We do use regression for binary quali by setting dummy varibales.
+   
 II. Testify Model Accuracy
  1. Measuring the quality of fitness, using: MSE (mean squared error)
     MSE: mean sqr error, MSE = (1/n) * sum from i=1 to i=n ( Yi-f^(Xi) )^2, sum sqr the diff between predicted and observed responses for Xi
@@ -29,15 +30,21 @@ II. Testify Model Accuracy
     We care about the TEST MSE, the training MSE usually always perform better than the test MSE.
     Notice the U-shape MSE and irreducible curve. The irreducible error it the minimum possible test MSE
     recall the E(Y-Y^)^2 = E[ f(x) + e - f^(x) ]^2 = [ f(x) - f^(x) ]^2  + var(e) = reducible error + irreducible error
- 2. Trade-off between variance and bias
     
+ 2. Trade-off between variance and bias
+    bias comes from the simplification of complex problems, variance alters when changing different training data set
  
-    more flexible - more variance. When fit the training too well, has the risk of overfitting. We care about the test MSE accordingly, the predictions.
-    more bias - less complexity, easy for interpretation. May not fitting the data well, sometimes superisingly has better predictions.
+    more variance - comes from more flexible models. 
+                    When fit the training too well, has the risk of overfitting. We care about the test MSE accordingly, the predictions.
+    more bias - comes from less flexible models, less complexity, easy for interpretation. 
+                May not fitting the data well, sometimes superisingly has better predictions.
+                
     reacall the E(Y-Y^)^2 and apply (x0,y0), E[ y0 - f^(x0) ]^2 = [ f(x) - f^(x) ]^2             +  var(e)
                                                                 =  reducible error               +  irreducible error
                                                                 =  Var(f^(x0)) + Bias(f^(x0))^2  +  var(e)
  
+ 3. In Classification Cases
+    Instead of using MSE, using 
    
 Some R bases: 
 1. create a function:
