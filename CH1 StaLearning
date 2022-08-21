@@ -45,9 +45,4 @@ II. Testify Model Accuracy
  
  3. In Classification Cases
     Instead of using MSE, using 
-   
-Some R bases: 
-1. create a function:
-  MyFunc = function(){ xxxx }
-  when use, MyFunc()
 
