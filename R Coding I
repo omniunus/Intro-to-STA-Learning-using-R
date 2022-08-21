@@ -1,0 +1,4 @@
+Some R bases: 
+1. create a function:
+  MyFunc = function(){ xxxx }
+  when use, MyFunc()
