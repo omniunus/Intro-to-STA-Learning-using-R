@@ -33,7 +33,9 @@ III. Generative Models for Classification
 2. Advantages over logistic regression: logi reg is unstable when see substantial seperations between two classes; 
                                         generative models better when Xs' distributions normal and small sample size;
                                         generative models natually apply fo case of more than 2 response classes.
-3. 
-    f(x)
-4. Three ways to estimate
+3.0 
+3.1 LDA,predictors=1; LDA, predictors>1
+3.2 QDA
+3.3 Naive Bayes
+
 
