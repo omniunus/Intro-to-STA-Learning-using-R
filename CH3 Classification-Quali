@@ -34,11 +34,13 @@ III. Generative Models for Classification
                                         generative models better when Xs' distributions normal and small sample size;
                                         generative models natually apply fo case of more than 2 response classes.
 3.0 There are K classes for the response, K>=2,
-    density function for X: fk(X)=== Pr(X|Y=k). X is a qualitative random variable. fk(x) large means highly possible observe x in kth class.
+    density function for X: fk(X) Ξ Pr(X|Y=k). X is a qualitative random variable. fk(x) large means highly possible observe x in kth class.
     Bayes' Theorem: Pr(Y=k |X=x) = ...
     pk(x) = Pr(Y=k |X=x), means the probability that x in kth class, given the predicted value of x
     Three ways to estimate the density function fk(x), has some simplification assumptions.
-    LDA has several means for each k predictor classes, but assuming one common covariance matrix; X ~ N(μ,Σ)
+    LDA has several means for each k predictor classes, but assuming one common covariance matrix; X ~ N(μk,Σ)
+    QDA has several means for each k predictor classes, and several covariance matrixs for each k predictor classes; X ~ N(μk,Σk)
+    
 3.1 LDA,predictors=1; LDA, predictors>1
 A=3.2 QDA
 3.3 Naive Bayes
