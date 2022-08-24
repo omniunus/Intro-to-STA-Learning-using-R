@@ -42,7 +42,9 @@ III. Generative Models for Classification
     QDA has several means for each k predictor classes, and several covariance matrixs for each k predictor classes; X ~ N(μk,Σk)
     
 3.1 LDA,predictors=1; LDA, predictors>1
-A=3.2 QDA
+    A=3.2 QDA
 3.3 Naive Bayes
+
+
 
 
