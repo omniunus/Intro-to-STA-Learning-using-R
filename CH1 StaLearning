@@ -44,5 +44,6 @@ II. Testify Model Accuracy
                                                                 =  Var(f^(x0)) + Bias(f^(x0))^2  +  var(e)
  
  3. In Classification Cases
-    Instead of using MSE, using 
+    quantifying the accuracy of the f^: 1/n * sum of I(yi not equals to y^i) from i = 1 to i = n
+    
 
