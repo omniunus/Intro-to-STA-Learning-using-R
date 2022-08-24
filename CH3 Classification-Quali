@@ -38,11 +38,13 @@ III. Generative Models for Classification
     Bayes' Theorem: Pr(Y=k |X=x) = ...
     pk(x) = Pr(Y=k |X=x), means the probability that x in kth class, given the predicted value of x
     Three ways to estimate the density function fk(x), has some simplification assumptions.
-    LDA has several means for each k predictor classes, but assuming one common covariance matrix; X ~ N(μk,Σ)
-    QDA has several means for each k predictor classes, and several covariance matrixs for each k predictor classes; X ~ N(μk,Σk)
+    
+LDA has several means for each k predictor classes, but assuming one common covariance matrix; X ~ N(μk,Σ)
+QDA has several means for each k predictor classes, and several covariance matrixs for each k predictor classes; X ~ N(μk,Σk)
+Naive Bayes is similar to QDA but has the preassumption that the p predictors are independent within the kth class; X ~ N(μk,Σk); use when n is small
     
 3.1 LDA,predictors=1; LDA, predictors>1
-    A=3.2 QDA
+3.2 QDA, 
 3.3 Naive Bayes
 
 
