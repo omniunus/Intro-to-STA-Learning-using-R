@@ -47,6 +47,7 @@ Application situations:
     When small n and many predictors, Naive Bayes (trade-off the many variances); predictors has interactions, use QDA;
     LDA similar to Logistic Regression, since LDA assumes X1, X2,...,Xp follows normal distribution in each class, while Log Reg max the likelyhood function,
       then if the normal distribution holds, LDA performs better, vice versa.
+    KNN has the largest flexibility, it would stand out for cases where decision boundry is highly non-linear with a large n and small p.
     But still, try all the methods if have resources.
     
 3.1 LDA,predictors=1; LDA, predictors>1
