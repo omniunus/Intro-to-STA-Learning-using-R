@@ -43,17 +43,21 @@ LDA has several means for each k predictor classes, but assuming one common cova
 QDA has several means for each k predictor classes, and several covariance matrixs for each k predictor classes; X ~ N(μk,Σk), quadratic relation
 Naive Bayes is similar to QDA but has the preassumption that the p predictors are independent within the kth class; X ~ N(μk,Σk)
 
-Application situations: 
-    When small n and many predictors, Naive Bayes (trade-off the many variances); predictors has interactions, use QDA;
-    LDA similar to Logistic Regression, since LDA assumes X1, X2,...,Xp follows normal distribution in each class, while Log Reg max the likelyhood function,
-      then if the normal distribution holds, LDA performs better, vice versa.
-    KNN has the largest flexibility, it would stand out for cases where decision boundry is highly non-linear with a large n and small p.
-    But still, try all the methods if have resources.
-    
 3.1 LDA,predictors=1; LDA, predictors>1
 3.2 QDA, 
 3.3 Naive Bayes
 
+IV. Choose the Appropriate Method
+
+1. When small n and many predictors, Naive Bayes (trade-off the many variances); make sure there's not much interactions inbetween the predictors since NBayes assume they are indipendent.
+2. LDA similar to Logistic Regression, since LDA assumes X1, X2,...,Xp follows normal distribution in each class, while Log Reg max the likelyhood function,
+  then if the normal distribution holds, LDA performs better, vice versa.
+3. KNN has the largest flexibility, it would stand out for cases where decision boundry is highly non-linear with a large n and small p. 
+  KNN Tends to reduce the bias while adding a lot of variance. It is a non-parametric method, it only gives predictions but not insights of the influenza.
+4. QDA would be prefered when many predictors while modest n. QDA does not need as much n as KNN does since it is a parametric form.
+    And for cases where small n and many predictors while there are internal relations among the predictors, Nbayes is not applicable, QDA performs better.
+5. But still, try all the methods if have resources.
+    
 
 
 
