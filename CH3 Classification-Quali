@@ -61,6 +61,8 @@ When facing a case, observing the n and p, for small n big p: if interactions am
 4. QDA would be prefered when many predictors while modest n. QDA does not need as much n as KNN does since it is a parametric form.
     And for cases where small n and many predictors while there are internal relations among the predictors, Nbayes is not applicable, QDA performs better.
 5. But still, try all the methods if have resources.
+
+
     
 
 
