@@ -9,3 +9,19 @@ Cross Validation could have two purposes: evaluate the performance is called mod
   3. Bootstrap
 
 I. Validation
+Processes:
+  Randomly divide the data set into training and test, euqally n for each. build model from training, predict the response and calc test MSE.
+  Repeat many times.
+Drawbacks:
+  test error rate highly variable, prediction model bad due to lacking data in the training set
+  to fix the drawbacks, we have LOOCV
+
+II. Leave-One-Out Cross-Validation (LOOCV)
+  only have a single observation as the validation (test) set;
+  Thus MSE bias significantly reduced, however hingly variable. Question: IF MANY REPEATINGS COULD REDUCE THE VARIABILITY ???
+  Drawback is hardware limitation.
+
+III. K-Fold Cross-Validation
+  
+
+
