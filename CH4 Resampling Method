@@ -1,1 +1,11 @@
+Resampling Methods:
+Seperating the data set into traning and testing, repeatedly fitting different trainings to model and calculate the test MSE.
+Cross Validation could have two purposes: evaluate the performance is called model assessment, help selecting the best level of flexibility is called mode selection.
 
+  1. Validation Set approach
+  2. Corss Validation (used for model assessment or model selection)
+     2.1 Leave-One-Out Cross Validation (LOOCV)
+     2.2 K-Fold Cross Validation
+  3. Bootstrap
+
+I. Validation
