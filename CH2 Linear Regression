@@ -38,4 +38,4 @@ Process: 1.see data, 2.fit data in lm() and 3.summary() to see beta estimtes, 5.
     Anova(lm.fit1, lm.fit2), prefer big F, small p,small error
     the anova performs a hypo test, hte null hypo is the two models fit the data same well.
 
-    
+
