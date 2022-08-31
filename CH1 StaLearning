@@ -42,7 +42,6 @@ II. Testify Model Accuracy
     reacall the E(Y-Y^)^2 and apply (x0,y0), E[ y0 - f^(x0) ]^2 = [ f(x) - f^(x) ]^2             +  var(e)
                                                                 =  reducible error               +  irreducible error
                                                                 =  Var(f^(x0)) + Bias(f^(x0))^2  +  var(e)
- 
  3. In Classification Cases
     quantifying the accuracy of the f^: 1/n * sum of I(yi not equals to y^i) from i = 1 to i = n
     
