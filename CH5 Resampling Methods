@@ -6,8 +6,10 @@ Two main methods:
  
  
  I. Cross-Validation
- 1. LOOCV(Leave-one-out cross-validation)
+    estimating the test error rate (which in a quanti case is MSE, in quali case is mismatch rate) by holding out a subset of traning observations as the test set
+  
+    1. LOOCV(Leave-one-out cross-validation)
 
- 2. K-Fold Cross-Validation
+    2. K-Fold Cross-Validation
  
  II. BootStrap
