@@ -1,1 +1,13 @@
+Two main methods: 
+  Corss-Validation: used for model selection (flexibility selection) and model assessment (evaluation); 
+      LOOCV(Leave-one-out cross-validation)
+      K-Fold Cross-Validation
+  Bootstrap: used for measuring accuracy of estimation of a parameter
+ 
+ 
+ I. Cross-Validation
+ 1. LOOCV(Leave-one-out cross-validation)
 
+ 2. K-Fold Cross-Validation
+ 
+ II. BootStrap
