@@ -1,15 +1,48 @@
-Two main methods: 
-  Corss-Validation: used for model selection (flexibility selection) and model assessment (evaluation); 
-      LOOCV(Leave-one-out cross-validation)
-      K-Fold Cross-Validation
-  Bootstrap: used for measuring accuracy of estimation of a parameter
+Two main methods: (both are utilizing CTL)
+    Corss-Validation: used for model selection (flexibility selection) and model assessment (evaluation); 
+        LOOCV(Leave-one-out cross-validation)
+        K-Fold Cross-Validation (recommended)
+    Bootstrap: used for measuring accuracy of estimation of a parameter
  
  
  I. Cross-Validation
     estimating the test error rate (which in a quanti case is MSE, in quali case is mismatch rate) by holding out a subset of traning observations as the test set
-  
-    1. LOOCV(Leave-one-out cross-validation)
-
-    2. K-Fold Cross-Validation
+    0. Validation
+      Randomly devide a data set into two parts, one for training, one for testing.
+      Get MSE1
+      Repeating, get MSE2...MSEn, calc avg(MSE)
+      
+      Disadv:: high bias due to not enough training data
+    
+    1. LOOCV (Leave-one-out cross-validation)
+      Process:
+      seperate one data set into two parts;
+      test set is called validation set here;
+      validation set only has one pbservation, eg: {x1,y1};
+      the rest observations are all in the training set, eg: {x2,y2}, {x3,y3} ,... {xn,yn};
+      calc the MSE.
+      repeat the process for n times, has MSE1, MSE2, MSE3, ... MSEn;
+      get the avg(MSE)
+      
+      Disadvs: If n is large, very time consuming. Unbiased MSEn but highly variable (single observation)
+      Alternative: use K-Fold Cross-Validation
+   
+    2. K-Fold Cross-Validation (similar to LOOCV, Leave-K Fold-out cross validation)
+      similar process, the validation is using K observations instead of one.
+      
+      
+    3. Conclusion for three validations
+      Validation: test MSE high bias due to not enough training data, easily overestimate the test MSE
+      LOOCV: test MSE high variance due to single test data, less bias
+      K-Fold: fine for both bias and variance
  
  II. BootStrap
+    uses CENTROL LIMIT THEROM to give fine estimation of parameter estimates' variances/risks
+    
+    original data set: Z
+    Obs = n
+    
+    Generate B sets;
+    Each bootstrap data set Z* contains n obs;
+    there are bootstrap data sets Z*1, Z*2, Z*3 ... Z*B
+ 
