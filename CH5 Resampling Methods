@@ -4,8 +4,7 @@ Two main methods: (both are utilizing CTL)
         K-Fold Cross-Validation (recommended)
     Bootstrap: used for measuring accuracy of estimation of a parameter
  
- 
- I. Cross-Validation
+I. Cross-Validation
     estimating the test error rate (which in a quanti case is MSE, in quali case is mismatch rate) by holding out a subset of traning observations as the test set
     0. Validation
       Randomly devide a data set into two parts, one for training, one for testing.
@@ -36,7 +35,7 @@ Two main methods: (both are utilizing CTL)
       LOOCV: test MSE high variance due to single test data, less bias
       K-Fold: fine for both bias and variance
  
- II. BootStrap
+II. BootStrap
     uses CENTROL LIMIT THEROM to give fine estimation of parameter estimates' variances/risks
     
     original data set: Z
