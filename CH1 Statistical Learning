@@ -1,27 +1,34 @@
 I. What is statistical learning?
    Develope an accurate model that can be used to predict responses using predictors.
-1. f(x)
-   Y = f(x) + e
-2. f^(x)
-   We are trying to estimate f for prediction and inference purpose.
-   Y^ = f^(x)
-   f(x) = f^(x) + reducible error
+   Two purposes including inference(barely use) and prediction.
    
-   Y = f(x) + e = f^(x) + reducible error + e
-3. We are focusing on bringing down the reducible error
-   E(Y-Y^)^2 = reducible error + e
-             = [f(x) -f^(x)]^2 + var(e)
-             = E[f(x) + e - f^(x)]^2
-             = E[Y-Y^]^2
-4. How we estimate f? parametric and non-parametric
-   parametric: make presumptions about the model, extimate the parameters. 
-   non-parametric: need a very large number of observations. 
-5. Trade-off between prediction accuracy and interpretability (flexibility has more variance, non_flexible has more bias)
-6. Supervised and un-supervised learning
-   unsupervised learning does not has the response value Y
-7. Regression and Classification Problems
-   regression - quantitatice response
-   classification - qualitative response. We do use regression for binary quali by setting dummy varibales.
+   1. f(x)
+      Y = f(x) + e
+   2. f^(x)
+      We are trying to estimate f for prediction and inference purpose.
+      Y^ = f^(x)
+      f(x) = f^(x) + reducible error
+
+      Y = f(x) + e = f^(x) + reducible error + e
+
+   3. We are focusing on bringing down the reducible error
+      E(Y-Y^)^2 = reducible error + e
+                = [f(x) -f^(x)]^2 + var(e)
+                = E[f(x) + e - f^(x)]^2
+                = E[Y-Y^]^2
+
+   4. How we estimate f? parametric and non-parametric
+      parametric: make presumptions about the model, extimate the parameters. 
+      non-parametric: need a very large number of observations. 
+
+   5. Trade-off between prediction accuracy and interpretability (flexibility has more variance, non_flexible has more bias)
+
+   6. Supervised and un-supervised learning
+      unsupervised learning does not has the response value Y
+
+   7. Regression and Classification Problems
+      regression - quantitatice response
+      classification - qualitative response. We do use regression for binary quali by setting dummy varibales.
    
 II. Testify Model Accuracy
  1. Measuring the quality of fitness, using: MSE (mean squared error)
@@ -44,6 +51,4 @@ II. Testify Model Accuracy
                                                                 =  Var(f^(x0)) + Bias(f^(x0))^2  +  var(e)
  3. In Classification Cases
     quantifying the accuracy of the f^: 1/n * sum of I(yi not equals to y^i) from i = 1 to i = n
-    
-    
 
