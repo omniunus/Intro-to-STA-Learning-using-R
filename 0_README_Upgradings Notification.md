@@ -1,8 +1,7 @@
 # Intro-to-STA-Learning-using-R
 
 Statistical Parts:
-Ch1 - Ch5 was fully constructed but still could have further alternations.
-
+Ch1 - Ch5 was fully constructed but still could have further alternations. The last date of alternations are shown at the 3rd col on the page.
 
 Current Upgrading: CH0 R Structure
 
