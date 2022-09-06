@@ -24,11 +24,12 @@ I. What is statistical learning?
    5. Trade-off between prediction accuracy and interpretability (flexibility has more variance, non_flexible has more bias)
 
    6. Supervised and un-supervised learning
-      unsupervised learning does not has the response value Y
+      supervised learning has the response value Y^;
+      unsupervised learning does not has the response value Y^, for example, clustering
 
    7. Regression and Classification Problems
       regression - quantitatice response
-      classification - qualitative response. We do use regression for binary quali by setting dummy varibales.
+      classification - qualitative response. (We do use regression for binary quali by setting dummy varibales.)
    
 II. Testify Model Accuracy
  1. Measuring the quality of fitness, using: MSE (mean squared error)
