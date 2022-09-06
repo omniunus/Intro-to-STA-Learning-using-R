@@ -1,4 +1,4 @@
-I. 
+I. Genearl
    In many situations, the response variables could be qualitative. One approach is classification. It predicte the probability of the oberservations that belongs to the qualitative categorization.
    5 types classifiers in the note: logistic regression, linear discrimizant analysis, quadratic discriminant analysis, naive Bayes, K-nearest enighbors
    Two reasons why not using linear Regression: For categorizations larger than 2, meaningless assigned numbers. For two cates, assign 1 and 0 but the estimated Y may exceed [0,1].
