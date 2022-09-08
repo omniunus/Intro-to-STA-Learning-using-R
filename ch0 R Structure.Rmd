@@ -1,0 +1,207 @@
+---
+title: "CH0 Basic R"
+output: pdf_document
+date: "2022-09-04"
+---
+
+I. Data Types
+  info stored in R can be in diff types 
+  4 types:
+    1. numeric (contains double/floating): 2.33  1  pi
+    2. integer: 10L 100L (enter L to let R know we are having an integer)
+    3. logical: TRUE FALSE T F
+    4. character: 'a string text'  '2.33'
+```{r}
+a = 10L; b = 10; c = '10'; d = T
+class(a); class(b); class(c); class(d)
+```
+
+II. Data Structures
+  ways data be organized
+  4 types:
+    1. vector - 1 dimension 1 type of data
+    2. list - 1 dimension mix types of data
+    3. matrix - 2 dimension 1 type of data
+    4. data frame - 2 dimension mix types of data
+    
+## 1.1 Vectors
+```{r}
+# numeric vector
+a1 = c(1,2,3,4:7)
+class(a1); a1
+a2 = c(1,2.33,3,7:4) # every elements auto floating
+class(a2); a2
+a3 = seq(1,10,2)
+class(a3); a3
+
+# extensions for floating vs integers
+a1.flo = as.double(a1)
+a1; a1.flo; class(a1.flo)
+a1.realflo = format(round(a1,2),nsmall=2)
+a1.realflo;class(a1.realflo)
+cat(a1.realflo)
+
+a2.asint= as.integer(a2) # 2.33 automatically be rounded into int
+a2; a2.asint
+
+# character vector
+# cannot use b = 3*'you are beautiful'
+b = c('x','y','z')
+class(b); print(b)
+
+# extension: how to repeat characters? use functions
+c1 = rep('You are Beautiful',3) # avoid using c as name since c() is a build-in function name
+class (c1); c1; length(c1)
+d = strrep('You are Beautiful ',3) # strrep() repeat and concatenate
+class(d); d; length(d)
+
+# If mix
+mix1 = c(1,2,'hi')
+mix1; class(mix1)
+mix2 = c(T,F,1)
+mix2; class(mix2)
+mix3 = c(T,F,1,'hi')
+mix3; class(mix3)
+```
+## 1.2 Factors
+Factors are variables in R that often refereed as categorical variables.
+Factors are stored as a vector of integer values with characters.
+```{r}
+data1 = c(1,2,2,3,1,2,3,3,1,2,3,3,1)
+f.data1 = factor(data1)
+f.data1 # R auto gives levels # f.data1 left out print(), they are the same thing
+cat('the class is: ',class(f.data1))
+
+# change 1,2,3 to I, II, III can directly change level, can be used in encrypting
+levels(f.data) = c('I','II','III')
+f.data
+
+# example, election:
+c.election = c('Biden','Trump','Biden','Trump','Hawkins','Biden','Jorgensen','Biden')
+table(c.election)
+c.election.factor = factor(c.election)
+c.election.factor
+# make the listing order in Trump < Biden < Hawkins < Jorgensen
+c.election = factor(c.election,levels = c('Trump','Biden','Hawkins','Jorgensen'),ordered = T)
+# table and summary give the same thing, str() notify it is a factor and gives some basic info
+table(c.election)
+summary(c.election)
+str(c.election)
+# levels list all the levels
+levels(c.election)
+factor(c.election)
+```
+## 2. List; one dimensional and hold multiple data types
+   one list can include another list
+```{r}
+list1 = list('A',1,T)
+class(list1)
+names(list1)
+list1
+list1[1]
+
+
+mix.list = list(chara = c('You','are'),
+                vec = c(1,2.33),
+                a.matrix = cbind(c(1, 2), c(3, 4)),
+                a.list = list(c(5,6.3), c('Beautiful', '!')))
+names(mix.list)
+mix.list
+mix.list[4]
+
+```
+## 3. Matrix; 2 dimensional same data type
+  Two ways to create matrix: 
+    1. use matrix() directly or 
+    2. combine vectors, 1 vec for 1 col using cbind(vec1,vec2,...); 1 vec for 1 row using rbind(row1,row2,...) 
+```{r}
+# Way One using matrix()
+matrix1 = matrix(data = c(1,2,3,4), 
+                 nrow = 2, # assign num of rows
+                 ncol = 2, # assign num of columns
+                 byrow = TRUE) # default is FALSE which is assigning the num vertically, 
+                             # by assigning byrow as TRUE, read numbers horizontally
+
+matrix1.simple = matrix (c(1,2,3,4),2,2)
+matrix1; matrix1.simple
+
+dim(matrix1) # show dimensions: nrow, ncol
+
+# Way Two using cbind(), rbind()
+vec1 = c(1,2,3)
+vec2 = c('Cat','Dog','Bird')
+vec3 = c('Cute','Dumb','no offense' )
+
+animal.matrix = cbind(vec1,vec2,vec3)
+animal.matrix # all the elements are transferred into characters now since matrix can only store one type of data
+```
+
+## 4. Data Frames; two dimensions and mix types of data
+   using data.frame(col1,col2,col3,...) ; colN signed as colName = c(Xij) 
+```{r}
+df1 = data.frame(Rank = c(1,2,3),
+                 Kinds = c('Cat','Dog','Bird'),
+                 Comments = c('Cute','Dumb','no offense'))
+
+df1
+dim(df1)
+names(df1)
+ncol(df1)
+
+# simple practice as a data science
+# Download ISLR if you do not have it.
+# you need to go to Tools, Install Packages, and type ISLR in packages
+library(ISLR)
+#head(Auto)
+#summary(Auto)
+
+# draw a plot
+plot(Auto$mpg,Auto$displacement) # dot plot
+lines(lowess(Auto$mpg,Auto$displacement)) # draw the trends line using lines(lowess(x,y))
+```
+
+III. Operators
+  how things works
+  4 types:
+    1. assignment operator
+    2. arithmetic operators
+    3. relational operators
+    4. logical operators: & | !
+
+1. assignment operator
+```{r}
+vec1 = c(1,2,3)
+vec2 = c(-1,-2,-3)
+```
+
+2. arithmetic operators
+```{r}
+vec1+vec2
+vec1*5 # every elements *5
+vec1^2
+vec1/vec2
+```
+3. relational operators: produces logical statements
+```{r}
+vec1<vec2 # comparing each element correspondingly
+vec1>1 # comparing each element with 1
+```
+4. logical operators: & | !
+```{r}
+a = 1
+b = 2
+c = F
+a>1 | b <2 # either one of the conditions on the left and right fit the condition would return true
+a>0 & b <3 # both have to meet the requirement to be true
+!c
+```
+
+
+IV. Sub-setting Data Structures
+  extract elements from a data structure
+  3 types:
+    1. sub-setting vectors
+    2. sub-setting lists
+    3. sub-setting data frames
+
+    
