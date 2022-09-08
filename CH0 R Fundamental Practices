@@ -1,0 +1,13 @@
+I. set up the environment: 
+  1. setting working directory: setwd ("/path/to/my/directory")
+  2. clean NA, view the data, summary the data: attach (Data); Data = na.omit(Data); summary(Data)
+  3. unsupervised learning in the first place to discover the data, then decide if and which supervised learning method would be used:
+      plot(Auto)
+      pairs(Auto) # These two both give general scatter plots contains all variables
+
+II. how you print things out: 
+    1. print(): or directly coding the element in ()
+    2. cat(): Outputs the objects, concatenating the representation
+             It converts its arguments to character vectors, 
+             concatenates them to a single character vector.
+
