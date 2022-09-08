@@ -166,36 +166,10 @@ III. Operators
     1. assignment operator
     2. arithmetic operators
     3. relational operators
-    4. logical operators: & | !
+    4. logical operators
+```{r}
 
-1. assignment operator
-```{r}
-vec1 = c(1,2,3)
-vec2 = c(-1,-2,-3)
 ```
-
-2. arithmetic operators
-```{r}
-vec1+vec2
-vec1*5 # every elements *5
-vec1^2
-vec1/vec2
-```
-3. relational operators: produces logical statements
-```{r}
-vec1<vec2 # comparing each element correspondingly
-vec1>1 # comparing each element with 1
-```
-4. logical operators: & | !
-```{r}
-a = 1
-b = 2
-c = F
-a>1 | b <2 # either one of the conditions on the left and right fit the condition would return true
-a>0 & b <3 # both have to meet the requirement to be true
-!c
-```
-
 
 IV. Sub-setting Data Structures
   extract elements from a data structure
@@ -203,5 +177,8 @@ IV. Sub-setting Data Structures
     1. sub-setting vectors
     2. sub-setting lists
     3. sub-setting data frames
+```{r}
+
+```
 
     
