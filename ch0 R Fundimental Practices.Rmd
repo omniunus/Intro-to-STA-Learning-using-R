@@ -1,8 +1,0 @@
----
-title: "ch0 R Fundimental Practices"
-output: pdf_document
-date: "2022-09-04"
----
-
-1. set up the environment
-2. how you print things out
