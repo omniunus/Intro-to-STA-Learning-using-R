@@ -1,0 +1,64 @@
+---
+title: "Untitled"
+output: pdf_document
+date: "2022-09-08"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+Build in Functions 
+Create own Functions
+
+1. Build in Functions
+```{r}
+a = c(1,2,3)
+max(a)
+```
+
+```{r}
+# try in df
+library(ISLR)
+Auto = na.omit(Auto)
+attach(Auto)
+summary(Auto)
+
+plot(mpg,weight)
+lines(lowess(mpg,weight),col=3,lwd=6)
+
+lm.fit = lm(mpg~weight,data = Auto)
+summary(lm.fit)
+```
+```{r}
+# abline()
+set.seed(12)
+rd.dst = rnorm(300)
+hist(mydata, col=6)
+abline(v = mean(mydata), col=9, lwd=3, lty=3) # lwd is line weidth; lty is line style
+```
+
+2. Create own Functions
+```{r}
+
+# stupid functions, only used to illustrate for(){} and function(){}
+
+my_func = function(x){
+  vec1 = vector()
+  for (i in x){
+    vec1 = append(vec1,i^2)
+  }
+  return (vec1)
+}
+
+# without for(){}
+
+my_func2 = function(x){
+  return(x^2)
+}
+  
+my_func(a)
+my_func2(a)
+```
+
